@@ -1,0 +1,30 @@
+|comparator2
+A[0] => temp0.IN0
+A[0] => temp3.IN0
+A[0] => temp4.IN0
+A[0] => temp0.IN0
+A[0] => temp6.IN0
+A[0] => temp7.IN0
+A[1] => temp1.IN0
+A[1] => temp2.IN0
+A[1] => temp4.IN1
+A[1] => temp1.IN0
+A[1] => temp5.IN0
+A[1] => temp7.IN1
+B[0] => temp0.IN1
+B[0] => temp6.IN1
+B[0] => temp7.IN1
+B[0] => temp0.IN1
+B[0] => temp3.IN1
+B[0] => temp4.IN1
+B[1] => temp1.IN1
+B[1] => temp5.IN1
+B[1] => temp6.IN1
+B[1] => temp1.IN1
+B[1] => temp2.IN1
+B[1] => temp3.IN1
+Equals <= Equals.DB_MAX_OUTPUT_PORT_TYPE
+A_greater_B <= A_greater_B.DB_MAX_OUTPUT_PORT_TYPE
+A_less_B <= A_less_B.DB_MAX_OUTPUT_PORT_TYPE
+
+

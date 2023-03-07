@@ -1,0 +1,37 @@
+--linraries
+library ieee;                                	
+use ieee.std_logic_1164.all;           	
+                                             		
+--entity																	
+entity comparator2 is port (                 	
+    A, B: in std_logic_vector(1 downto 0); 
+    Equals: out std_logic;
+	 A_greater_B: out std_logic;
+	 A_less_B: out std_logic
+	 
+	 );            		
+end comparator2;                             	
+
+--architecture
+architecture comparator_structure of comparator2 is
+	signal temp0, temp1, temp2, temp3, temp4, temp5, temp6, temp7: std_logic; 
+	
+begin
+	-- A = B
+	temp0 <= ((not A(0)) and (not B(0))) or (A(0) and B(0));
+	temp1 <= ((not A(1)) and (not B(1))) or (A(1) and B(1));
+	Equals <= temp0 and temp1;
+	
+	-- A > B
+	temp2 <= A(1) and (not B(1));
+	temp3 <= A(0) and (not B(1)) and (not (B(0)));
+	temp4 <= A(1) and A(0) and (not B(0));
+	A_greater_B <= temp2 or temp3 or temp4;
+	
+	-- A < B
+	temp5 <= B(1) and (not A(1));
+	temp6 <= (not A(0)) and B(1) and B(0);
+	temp7 <= (not A(1)) and (not A(0)) and B(0);
+	A_less_B <= temp5 or temp6 or temp7;
+
+end architecture comparator_structure;
